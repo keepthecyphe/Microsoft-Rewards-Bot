@@ -847,10 +847,10 @@ def get_point_total(pc=False, mobile=False, log=False):
             int, browser.find_element_by_css_selector('#userBanner > mee-banner > div > div > div > div.info-columns > div:nth-child(3) > mee-banner-slot-4 > mee-rewards-user-status-item > mee-rewards-user-status-dailypoint > div > div > div > div > div > p.bold.number.margin-top-1 > mee-rewards-counter-animation > span > b').text))[0]
         # get pc points
         time.sleep(3)
-        current_pc_points, max_pc_points = map(
+        current_mobile_points, max_mobile_points = map(
             int, browser.find_element_by_xpath("//div[@id='userPointsBreakdown']/div/div[2]/div/div[2]/div/div[2]/mee-rewards-user-points-details/div/div/div/div/p[2]").text.split(' / '))
         # get mobile points
-        current_mobile_points, max_mobile_points = map(
+        current_pc_points, max_pc_points = map(
             int, browser.find_element_by_xpath("//div[@id='userPointsBreakdown']/div/div[2]/div/div/div/div[2]/mee-rewards-user-points-details/div/div/div/div/p[2]").text.split(' / ', 1))
         # get edge points
         current_edge_points, max_edge_points = map(
